@@ -1,17 +1,28 @@
-package btvnss1;
 import java.util.Scanner;
-public class b2 {
+
+public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int a,b;
-        a=sc.nextInt();
-        b=sc.nextInt();
-        System.out.println("first : "+a);
-        System.out.println("second : "+b);
-        System.out.println("tong : "+ (a+b));
-        System.out.println("hieu : "+ (a-b));
-        System.out.println("tich : "+ (a*b));
-        System.out.println("thuong : "+ (a/b));
-        System.out.println("phan du : "+ (a%b));
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Nhập một số nguyên từ 1 đến 12: ");
+        int month = scanner.nextInt();
+
+        switch (month) {
+            case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+                System.out.println("Tên tháng: Tháng " + month);
+                System.out.println("Số ngày: 31 ngày");
+                break;
+            case 4: case 6: case 9: case 11:
+                System.out.println("Tên tháng: Tháng " + month);
+                System.out.println("Số ngày: 30 ngày");
+                break;
+            case 2:
+                System.out.println("Tên tháng: Tháng 2");
+                System.out.println("Số ngày: 28 hoặc 29 ngày");
+                break;
+            default:
+                System.out.println("Tháng không hợp lệ");
+        }
+
+        scanner.close();
     }
 }
